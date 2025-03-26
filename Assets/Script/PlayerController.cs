@@ -2,75 +2,62 @@
 
 public class PlayerController : MonoBehaviour
 {
+    public float thrust = 30f;      // แรงขับเคลื่อน
+    public float liftForce = 20f;   // แรงยกตัวขึ้น
+    public float maxSpeed = 100f;   // ความเร็วสูงสุด
+    public float turnSpeed = 2f;    // ความเร็วการหมุน
+    public float rollSpeed = 2f;    // ความเร็วการหมุนตัว (เอียงซ้าย-ขวา)
+
     private Rigidbody rb;
 
-    public float engineThrust = 40;
-    public float reverseThrust = 25f;
-    public float liftForce = 0.5f;
-    public float drag = 0.03f;
-    public float angularDrag = 0.03f;
-
-    public float yawPower = 60f;
-    public float pitchPower = 30f;
-    public float rollPower = 20f;
-
-
-
-    void Awake()
+    void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.linearDamping = drag;
-        rb.angularDamping = angularDrag;
-
     }
 
     void FixedUpdate()
     {
-        HandleThrust();    // ควบคุมการเร่งความเร็ว
-        HandleLift();      // จำลองแรงยกของเครื่องบิน
-        HandleControls();  // ควบคุมการเลี้ยวและการหมุน
+        HandleMovement();
+        HandleRotation();
+        LimitSpeed();
     }
 
-    void HandleThrust()
+    void HandleMovement()
     {
-        float thrustInput = 0f;
-
+        // กด W เพื่อเร่งเครื่องบินไปข้างหน้า
         if (Input.GetKey(KeyCode.W))
         {
-            thrustInput = engineThrust; // กด W ไปข้างหน้า
+            rb.AddForce(transform.forward * thrust);
         }
-        else if (Input.GetKey(KeyCode.S))
+
+        // กด Spacebar เพื่อบินขึ้น (เพิ่มแรงยกตัว)
+        if (Input.GetKey(KeyCode.Space))
         {
-            thrustInput = -reverseThrust; // กด S ถอยหลัง (ช้ากว่าไปหน้า)
+            rb.AddForce(transform.up * liftForce);
         }
-
-        rb.AddForce(transform.forward * thrustInput, ForceMode.Force);
     }
 
-    void HandleLift()
+    void HandleRotation()
     {
-        float effectiveLift = rb.linearVelocity.magnitude * liftForce;
-        rb.AddForce(Vector3.up * effectiveLift, ForceMode.Force);
+        float roll = Input.GetAxis("Horizontal"); // ซ้าย-ขวา (A,D)
+        float pitch = Input.GetAxis("Vertical");  // ขึ้น-ลง (W,S)
+
+        // กำหนด angularVelocity ให้เครื่องบินหมุน
+        Vector3 newAngularVelocity = rb.angularVelocity;
+
+        newAngularVelocity.x = pitch * turnSpeed; // ก้ม-เงย
+        newAngularVelocity.y = roll * turnSpeed;  // เลี้ยวซ้าย-ขวา
+        newAngularVelocity.z = -roll * rollSpeed; // เอียงตัวเมื่อเลี้ยว
+
+        rb.angularVelocity = newAngularVelocity;
     }
 
-    void HandleControls()
+    void LimitSpeed()
     {
-        float yaw = 0f;
-        float pitch = Input.GetAxis("Vertical") * pitchPower * Time.deltaTime;
-        float roll = 0f;
-
-        // Yaw (เลี้ยวซ้ายขวา)
-        if (Input.GetKey(KeyCode.A)) yaw = -yawPower; // เลี้ยวซ้าย
-        if (Input.GetKey(KeyCode.D)) yaw = yawPower;  // เลี้ยวขวา
-
-        // Roll (เอียงปีก)
-        if (Input.GetKey(KeyCode.Q)) roll = rollPower * Time.deltaTime;
-        if (Input.GetKey(KeyCode.E)) roll = -rollPower * Time.deltaTime;
-
-        // เพิ่มแรงบิดให้เครื่องบินหมุนตามแกนต่างๆ
-        rb.AddTorque(transform.up * yaw, ForceMode.Force);       // หมุนซ้าย-ขวา
-        rb.AddTorque(transform.right * pitch, ForceMode.Force);  // เงย/กดหัว
-        rb.AddTorque(transform.forward * roll, ForceMode.Force); // เอียงปีก
+        // จำกัดความเร็วสูงสุด
+        if (rb.linearVelocity.magnitude > maxSpeed)
+        {
+            rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxSpeed);
+        }
     }
-
 }
