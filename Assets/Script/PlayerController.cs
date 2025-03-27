@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         HandleMovement();
         HandleRotation();
-        LimitSpeed();
+        LimitSpeed();  
     }
 
     void HandleMovement()
@@ -58,9 +58,9 @@ public class PlayerController : MonoBehaviour
         }
 
         // จำกัดความเร็วในการหมุน (เลี้ยวซ้าย-ขวา)
-        if (rb.angularVelocity.magnitude > maxTurn)
+        if (rb.angularVelocity.magnitude > maxSpeed)
         {
-            rb.angularVelocity = Vector3.ClampMagnitude(rb.angularVelocity, maxTurn);
+            rb.angularVelocity = Vector3.ClampMagnitude(rb.angularVelocity, maxSpeed);
         }
 
         rb.angularVelocity = newAngularVelocity;
@@ -74,4 +74,5 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxSpeed);
         }
     }
+   
 }
