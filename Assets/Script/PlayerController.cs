@@ -2,11 +2,11 @@
 
 public class PlayerController : MonoBehaviour
 {
-    public float thrust = 30f;      // แรงขับเคลื่อน
+    public float thrust = 10f;      // แรงขับเคลื่อน
     public float liftForce = 20f;   // แรงยกตัวขึ้น
-    public float maxSpeed = 100f;   // ความเร็วสูงสุด
-    public float turnSpeed = 2f;    // ความเร็วการหมุน
-    public float rollSpeed = 2f;    // ความเร็วการหมุนตัว (เอียงซ้าย-ขวา)
+    public float maxSpeed = 50f;   // ความเร็วสูงสุด
+    public float turnSpeed = 1f;    // ความเร็วการหมุน
+    public float rollSpeed = 1f;    // ความเร็วการหมุนตัว (เอียงซ้าย-ขวา)
 
     private Rigidbody rb;
 
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         // กด W เพื่อเร่งเครื่องบินไปข้างหน้า
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(transform.forward * thrust);
+          rb.AddForce(transform.forward * thrust);
         }
 
         // กด Spacebar เพื่อบินขึ้น (เพิ่มแรงยกตัว)
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
         // กำหนด angularVelocity ให้เครื่องบินหมุน
         Vector3 newAngularVelocity = rb.angularVelocity;
 
-        newAngularVelocity.x = pitch * turnSpeed; // ก้ม-เงย
+        //newAngularVelocity.x = pitch * turnSpeed; // ก้ม-เงย
         newAngularVelocity.y = roll * turnSpeed;  // เลี้ยวซ้าย-ขวา
         newAngularVelocity.z = -roll * rollSpeed; // เอียงตัวเมื่อเลี้ยว
 
