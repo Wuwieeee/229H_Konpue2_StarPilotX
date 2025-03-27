@@ -4,7 +4,8 @@ public class PlayerController : MonoBehaviour
 {
     public float thrust = 10f;      // แรงขับเคลื่อน
     public float liftForce = 20f;   // แรงยกตัวขึ้น
-    public float maxSpeed = 50f;   // ความเร็วสูงสุด
+    public float maxSpeed = 30f;   // ความเร็วสูงสุด
+    public float maxTurn = 10f;   // ความเร็วสูงสุด
     public float turnSpeed = 10f;    // ความเร็วการหมุน
     public float rollSpeed = 1f;    // ความเร็วการหมุนตัว (เอียงซ้าย-ขวา)
 
@@ -35,19 +36,32 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(transform.up * liftForce);
         }
+        // กด Spacebar เพื่อบินขึ้น (เพิ่มแรงยกตัว)
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            rb.AddForce(transform.up * -liftForce);
+        }
     }
 
     void HandleRotation()
     {
-        float roll = Input.GetAxis("Horizontal"); // ซ้าย-ขวา (A,D)
+        float turn = Input.GetAxis("Horizontal"); // ซ้าย-ขวา (A,D)
         float pitch = Input.GetAxis("Vertical");  // ขึ้น-ลง (W,S)
 
         // กำหนด angularVelocity ให้เครื่องบินหมุน
         Vector3 newAngularVelocity = rb.angularVelocity;
 
-        //newAngularVelocity.x = pitch * turnSpeed; // ก้ม-เงย
-        newAngularVelocity.y = roll * turnSpeed;  // เลี้ยวซ้าย-ขวา
-        //newAngularVelocity.z = -roll * rollSpeed; // เอียงตัวเมื่อเลี้ยว
+        // ถ้ามีการกด A หรือ D ให้เปลี่ยนทิศทางของเครื่องบินทันที
+        if (turn != 0)
+        {
+            transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0, Space.World);
+        }
+
+        // จำกัดความเร็วในการหมุน (เลี้ยวซ้าย-ขวา)
+        if (rb.angularVelocity.magnitude > maxTurn)
+        {
+            rb.angularVelocity = Vector3.ClampMagnitude(rb.angularVelocity, maxTurn);
+        }
 
         rb.angularVelocity = newAngularVelocity;
     }
