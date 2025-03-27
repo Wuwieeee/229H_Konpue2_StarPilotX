@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
     public float thrust = 10f;      // แรงขับเคลื่อน
     public float liftForce = 20f;   // แรงยกตัวขึ้น
     public float maxSpeed = 50f;   // ความเร็วสูงสุด
-    public float turnSpeed = 1f;    // ความเร็วการหมุน
+    public float turnSpeed = 10f;    // ความเร็วการหมุน
     public float rollSpeed = 1f;    // ความเร็วการหมุนตัว (เอียงซ้าย-ขวา)
 
     private Rigidbody rb;
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
         //newAngularVelocity.x = pitch * turnSpeed; // ก้ม-เงย
         newAngularVelocity.y = roll * turnSpeed;  // เลี้ยวซ้าย-ขวา
-        newAngularVelocity.z = -roll * rollSpeed; // เอียงตัวเมื่อเลี้ยว
+        //newAngularVelocity.z = -roll * rollSpeed; // เอียงตัวเมื่อเลี้ยว
 
         rb.angularVelocity = newAngularVelocity;
     }
