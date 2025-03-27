@@ -189,9 +189,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0E1E\u0E31\u0E17\u0E18\u0E1E\u0E25 \u0E41\u0E0B\u0E48\u0E25\u0E34\u0E49\u0E21
+  m_Text: "\u0E18\u0E35\u0E23\u0E27\u0E31\u0E12\u0E19\u0E4C \u0E01\u0E34\u0E2C\u0E32\u0E20\u0E31\u0E01\u0E15\u0E23\u0E4C
+    \n\u0E1E\u0E31\u0E17\u0E18\u0E1E\u0E25 \u0E41\u0E0B\u0E48\u0E25\u0E34\u0E49\u0E21
     \n\u0E1E\u0E31\u0E13\u0E13\u0E4C\u0E0A\u0E38\u0E14\u0E32 \u0E01\u0E38\u0E25\u0E28\u0E23\u0E35\u0E0A\u0E19\u0E32\u0E23\u0E31\u0E15\u0E19\u0E4C
-    \n\u0E18\u0E35\u0E23\u0E27\u0E31\u0E12\u0E19\u0E4C \u0E01\u0E34\u0E2C\u0E32\u0E20\u0E31\u0E01\u0E15\u0E23\u0E4C "
+    \n"
 --- !u!222 &202580765
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -947,7 +948,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "1660701762 \n1660707827  \n1660700731 "
+  m_Text: "1660700731 \n1660701762 \n1660707827  \n"
 --- !u!222 &1724563893
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1026,12 +1027,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Programmer, Game Designer
+  m_Text: 'Audio Management
 
-    UI Designer , Asset Management, Slide Show
-    Creator
+    Programmer, Game Designer
 
-    Asset Management , Audio Management'
+    UI , Asset Management,
+    Presentation Slides
+
+'
 --- !u!222 &1731889154
 CanvasRenderer:
   m_ObjectHideFlags: 0
