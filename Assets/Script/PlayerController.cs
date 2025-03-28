@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float maxTurn = 10f;   // ความเร็วสูงสุด
     public float turnSpeed = 10f;    // ความเร็วการหมุน
     public float rollSpeed = 1f;    // ความเร็วการหมุนตัว (เอียงซ้าย-ขวา)
+    public Transform firePoint;
 
     private Rigidbody rb;
 
@@ -20,7 +21,8 @@ public class PlayerController : MonoBehaviour
     {
         HandleMovement();
         HandleRotation();
-        LimitSpeed();  
+        LimitSpeed();
+        Raycast();
     }
 
     void HandleMovement()
@@ -74,5 +76,10 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxSpeed);
         }
     }
-   
+    void Raycast()
+    {
+        Debug.DrawRay(firePoint.position, transform.forward * 30, Color.green);
+    }
+
+
 }

@@ -1284,7 +1284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869262714}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.2438179, y: 2.0259614, z: -12.843809}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1292,37 +1292,6 @@ Transform:
   - {fileID: 295763815}
   - {fileID: 2022771904}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &869551306
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 869551307}
-  m_Layer: 0
-  m_Name: BulletPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &869551307
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869551306}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.00000003774895, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.000026342937, y: 0.0029, z: 0.0115}
-  m_LocalScale: {x: 0.0033558174, y: 0.0033558174, z: 0.0033558174}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1290132923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &873470848
 GameObject:
@@ -1500,7 +1469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5dc57d2f14d244a42b94c9ecbf5e3953, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5dc57d2f14d244a42b94c9ecbf5e3953, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1531,17 +1500,14 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5dc57d2f14d244a42b94c9ecbf5e3953, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 869551307}
+      addedObject: {fileID: 330585546}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5dc57d2f14d244a42b94c9ecbf5e3953, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 330585546}
+      addedObject: {fileID: 1573280124}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5dc57d2f14d244a42b94c9ecbf5e3953, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1290132919}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5dc57d2f14d244a42b94c9ecbf5e3953, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1290132920}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5dc57d2f14d244a42b94c9ecbf5e3953, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1290132924}
@@ -1551,6 +1517,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5dc57d2f14d244a42b94c9ecbf5e3953, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1290132928}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5dc57d2f14d244a42b94c9ecbf5e3953, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1290132931}
   m_SourcePrefab: {fileID: 100100000, guid: 5dc57d2f14d244a42b94c9ecbf5e3953, type: 3}
 --- !u!1 &1290132918 stripped
 GameObject:
@@ -1584,24 +1553,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 32
   m_CollisionDetection: 0
---- !u!114 &1290132920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290132918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d89750191df43d14593318a6c122c027, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thrust: 10
-  liftForce: 30
-  maxSpeed: 20
-  maxTurn: 100
-  turnSpeed: 100
-  rollSpeed: 2
 --- !u!4 &1290132923 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5dc57d2f14d244a42b94c9ecbf5e3953, type: 3}
@@ -1663,7 +1614,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5465578461927434115, guid: 217c1ffecc30e1b4eaa4583098d1377b, type: 3}
-  firePoint: {fileID: 869551307}
+  firePoint: {fileID: 1573280124}
+--- !u!114 &1290132931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290132918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89750191df43d14593318a6c122c027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 10
+  liftForce: 20
+  maxSpeed: 30
+  maxTurn: 20
+  turnSpeed: 20
+  rollSpeed: 1
+  firePoint: {fileID: 1573280124}
 --- !u!1 &1371409559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,6 +1930,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1468246922}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1573280123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1573280124}
+  m_Layer: 0
+  m_Name: firePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1573280124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573280123}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00000003774895, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.00008, y: -0.0019463744, z: 0.0049666082}
+  m_LocalScale: {x: 0.0033558174, y: 0.0033558174, z: 0.0033558174}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1290132923}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1635699857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,7 +2192,7 @@ Cloth:
   m_UseGravity: 1
   m_Damping: 0
   m_ExternalAcceleration: {x: 0, y: 0, z: 0}
-  m_RandomAcceleration: {x: 10, y: 0, z: 10}
+  m_RandomAcceleration: {x: 0, y: 0, z: 0}
   m_WorldVelocityScale: 0.5
   m_WorldAccelerationScale: 1
   m_Friction: 0.5
@@ -2201,27 +2202,27 @@ Cloth:
   m_SolverFrequency: 120
   m_SleepThreshold: 0.1
   m_Coefficients:
-  - maxDistance: 3.4028235e+38
+  - maxDistance: 0.2
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
+  - maxDistance: 0.2
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
+  - maxDistance: 0.2
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
+  - maxDistance: 0.2
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
+  - maxDistance: 0.2
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
+  - maxDistance: 0.2
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
+  - maxDistance: 0.2
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
+  - maxDistance: 0.2
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
+  - maxDistance: 0.2
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
+  - maxDistance: 0.2
     collisionSphereDistance: 3.4028235e+38
-  - maxDistance: 3.4028235e+38
+  - maxDistance: 0.2
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
@@ -2545,12 +2546,12 @@ SceneRoots:
   m_Roots:
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 1290132917}
+  - {fileID: 1446467760}
   - {fileID: 1371409563}
   - {fileID: 589771624}
   - {fileID: 46915237}
   - {fileID: 244335537}
   - {fileID: 223860373}
   - {fileID: 1635699861}
-  - {fileID: 1446467760}
   - {fileID: 869262715}
+  - {fileID: 1290132917}
