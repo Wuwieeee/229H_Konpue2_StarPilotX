@@ -22,7 +22,5 @@ public class BirdMoveMent : MonoBehaviour
         float moveX = Random.Range(-1f, 1f);
         float moveZ = Random.Range(-1f, 1f);
         moveDirection = new Vector3(moveX, 0, moveZ).normalized; // ทำให้ทิศทางคงที่
-    }
-
-    
+    }  
 }
