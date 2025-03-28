@@ -1,29 +1,22 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BulletShoot : MonoBehaviour
 {
-    public GameObject bulletPrefab; // Prefab ??????
-    public Transform firePoint; // ???????????????
-    public float bulletSpeed = 20f;
+    public GameObject bulletPrefab;  // Prefab ของกระสุนที่ต้องการยิง
+    public Transform firePoint;      // จุดที่กระสุนจะออก (ตำแหน่งปากปืน)
 
     void Update()
     {
-        // ?????????????????????????
-        if (Input.GetMouseButtonDown(0)) // 0 = ????????
+        // ตรวจสอบว่าผู้เล่นคลิกซ้ายเมาส์
+        if (Input.GetMouseButtonDown(0))  // 0 หมายถึงการคลิกซ้าย
         {
-            Shoot();
+            FireBullet();
         }
     }
 
-    void Shoot()
+    void FireBullet()
     {
-        // ????????????????????
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-
-        // ??? Rigidbody ???????????????????????????
-        Rigidbody rb = bullet.GetComponent<Rigidbody>();
-
-        // ?????????????????????
-        rb.linearVelocity = firePoint.forward * bulletSpeed;
+        // สร้างกระสุนจากจุดยิง (firePoint) และทำให้กระสุนหมุนตามปากกระบอกปืน
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }
