@@ -1,25 +1,38 @@
 ﻿using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public Text scoreText; // ตัวแปรอ้างอิงถึง UI Text
+    public Text scoreText; 
     private int score = 0;
-
+    public static ScoreManager Instance;
+    
+    void Awake()
+    {
+        // ตรวจสอบและกำหนด Instance ของ ScoreManager
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject); // หากมี Instance อยู่แล้วให้ลบตัวเอง
+        }
+    }
     void Start()
     {
-        UpdateScoreText(); // เริ่มต้นการแสดงคะแนน
+        UpdateScoreText(); 
     }
 
     public void AddScore(int points)
     {
-        score += points; // เพิ่มคะแนน
-        UpdateScoreText(); // อัพเดต UI
+        score += points; 
+        UpdateScoreText(); 
     }
 
     private void UpdateScoreText()
     {
-        scoreText.text = "คะแนน: " + score; // แสดงคะแนนบน UI
+        scoreText.text = "Score: " + score; // อัปเดตข้อความ UI
     }
+
 }
