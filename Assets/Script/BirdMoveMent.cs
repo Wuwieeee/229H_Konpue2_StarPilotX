@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 public class BirdMoveMent : MonoBehaviour
 {
+    
     public float speed = 3f;
     private Vector3 moveDirection;
 
@@ -21,4 +23,6 @@ public class BirdMoveMent : MonoBehaviour
         float moveZ = Random.Range(-1f, 1f);
         moveDirection = new Vector3(moveX, 0, moveZ).normalized; // ทำให้ทิศทางคงที่
     }
+
+    
 }
