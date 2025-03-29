@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    private static int score = 0; 
-
     private void Start()
     {
         if (GameManager.Instance != null)
