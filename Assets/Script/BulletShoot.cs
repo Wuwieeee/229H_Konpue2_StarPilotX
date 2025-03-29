@@ -13,7 +13,6 @@ public class BulletShoot : MonoBehaviour
             FireBullet();
         }
     }
-
     void FireBullet()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
