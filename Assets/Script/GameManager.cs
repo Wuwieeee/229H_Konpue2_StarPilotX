@@ -6,12 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;  // ตัวแปร static สำหรับเรียกใช้งาน
-    public Text scoreText;  // UI Text สำหรับแสดงคะแนน
-    private static int score = 0;  // ตัวแปรสำหรับเก็บคะแนน
+    public static GameManager Instance;  
+    public Text scoreText;  
+    private static int score = 0; 
     public Text messageText;
 
-    // สร้าง Singleton ให้กับ ScoreManager
     void Awake()
     {
         if (Instance == null)
@@ -27,7 +26,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(ShowMessageForSeconds(" shoot 20 birds", 3f));
-        // ตั้งค่า UI Text เริ่มต้น
+  
         if (scoreText != null)
         {
             scoreText.text = "Score: " + score;
@@ -60,7 +59,7 @@ public class GameManager : MonoBehaviour
     {
         messageText.text = message;
         yield return new WaitForSeconds(duration);
-        messageText.text = ""; // Clear the message after the duration
+        messageText.text = "";
     }
 }
 

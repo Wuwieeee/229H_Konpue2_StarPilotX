@@ -4,12 +4,12 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameManager gameManager;
-    public float speed = 10f; // ความเร็วของกระสุน
-    public float lifespan = 10f; // เวลาที่กระสุนจะอยู่ในเกม (10 วินาที)
+    public float speed = 10f;
+    public float lifespan = 10f; 
   
     void Update()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime); // เคลื่อนที่ไปข้างหน้า
+        transform.Translate(Vector3.forward * speed * Time.deltaTime); 
         Destroy(gameObject, lifespan);
     }
 
@@ -17,8 +17,8 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject); // ลบศัตรูออกจากเกม
-            Destroy(gameObject); // ลบกระสุนออกจากเกม
+            Destroy(other.gameObject); 
+            Destroy(gameObject);
         }
     }
 }
