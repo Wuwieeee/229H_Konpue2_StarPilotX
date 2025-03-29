@@ -966,9 +966,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\nAsset Acknowledgments\n3D Models created using Meshy.ai (https://meshy.ai)\nBackground
-    Music created using Suno.ai (https://www.suno.com)\nSound Effect by [MOONJI TV
-    \uBB38\uC9C0] \u2013 (https://youtu.be/52H_Bgd7_RY?si=40x_YTqJ52Jua_G9)"
+  m_Text: '
+
+    Asset Acknowledgments
+
+    3D Models created using Meshy.ai (https://meshy.ai)
+
+    Background
+    Music created using Suno.ai (https://www.suno.com)
+
+'
 --- !u!222 &1288141354
 CanvasRenderer:
   m_ObjectHideFlags: 0
