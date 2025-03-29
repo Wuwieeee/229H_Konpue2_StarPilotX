@@ -32,6 +32,10 @@ public class PlayerController : MonoBehaviour
         {
           rb.AddForce(transform.forward * thrust);
         }
+        if (Input.GetKey(KeyCode.S))
+        {
+          rb.AddForce(transform.forward * -thrust);
+        }
 
         // กด Spacebar เพื่อบินขึ้น (เพิ่มแรงยกตัว)
         if (Input.GetKey(KeyCode.Space))
