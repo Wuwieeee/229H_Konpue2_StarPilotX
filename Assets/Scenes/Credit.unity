@@ -146,15 +146,15 @@ RectTransform:
   m_GameObject: {fileID: 202580762}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
+  m_LocalScale: {x: 0.46, y: 0.46, z: 0.46}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1499044326}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -64.09567, y: -125.523445}
-  m_SizeDelta: {x: 1090.1521, y: 312.2518}
+  m_AnchoredPosition: {x: -288, y: -119.093506}
+  m_SizeDelta: {x: 789.0845, y: 284.2956}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &202580764
 MonoBehaviour:
@@ -331,14 +331,14 @@ RectTransform:
   m_GameObject: {fileID: 437607849}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9485984, y: 0.7134207, z: 0.55735993}
+  m_LocalScale: {x: 6.5522842, y: 2.3989217, z: 1.8741578}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2146502976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17, y: -176}
+  m_AnchoredPosition: {x: -17, y: -332}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &437607851
@@ -482,15 +482,15 @@ RectTransform:
   m_GameObject: {fileID: 812916489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
+  m_LocalScale: {x: 0.46, y: 0.46, z: 0.46}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2146502976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.5166, y: -134}
-  m_SizeDelta: {x: 6225.469, y: 2429.9}
+  m_AnchoredPosition: {x: -10.4034, y: -131.454}
+  m_SizeDelta: {x: 3212.1973, y: 2091.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &812916491
 MonoBehaviour:
@@ -514,7 +514,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -526,12 +526,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "-------------------------\n CREDITS\nSTAR PIOLOTX\n-------------------------\nKonpue2
-    Team\n\n\n\n\n-------------------------\n\n\n\n\n\n\n\n\n\nGames and Interactive
-    Media\n-------------------------\nAsset Acknowledgments\n3D Models created using
-    Meshy.ai (https://meshy.ai)\n-Music by [\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E2A\u0E23\u0E49\u0E32\u0E07\u0E40\u0E1E\u0E25\u0E07]
-    from [\u0E41\u0E2B\u0E25\u0E48\u0E07\u0E17\u0E35\u0E48\u0E21\u0E32]\n- Background
-    Music: \"Song Title\" by [\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E41\u0E15\u0E48\u0E07]
-    \u2013 [URL/License]"
+    Team\n\n\n\n\n\n\n\n-------------------------\n\n\n\n\n\n\n\nGames and Interactive
+    Media\n-------------------------\n"
 --- !u!222 &812916492
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -574,7 +570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17, y: 130}
+  m_AnchoredPosition: {x: 17, y: -600}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952535601
@@ -784,15 +780,15 @@ RectTransform:
   m_GameObject: {fileID: 1288141351}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
+  m_LocalScale: {x: 0.46, y: 0.46, z: 0.46}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2146502976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.5166, y: -357}
-  m_SizeDelta: {x: 6225.469, y: 2429.9}
+  m_AnchoredPosition: {x: -10.5526, y: -726}
+  m_SizeDelta: {x: 3207.061, y: 657.6731}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1288141353
 MonoBehaviour:
@@ -816,7 +812,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -827,11 +823,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\n\nAsset Acknowledgments\n3D Models created using Meshy.ai (https://meshy.ai)\nMusic
-    by [\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E2A\u0E23\u0E49\u0E32\u0E07\u0E40\u0E1E\u0E25\u0E07]
-    from [\u0E41\u0E2B\u0E25\u0E48\u0E07\u0E17\u0E35\u0E48\u0E21\u0E32]\nBackground
-    Music: \"Song Title\" by [\u0E0A\u0E37\u0E48\u0E2D\u0E1C\u0E39\u0E49\u0E41\u0E15\u0E48\u0E07]
-    \u2013 [URL/License]"
+  m_Text: "\nAsset Acknowledgments\n3D Models created using Meshy.ai (https://meshy.ai)\nBackground
+    Music created using Suno.ai (https://www.suno.com)\nSound Effect by [MOONJI TV
+    \uBB38\uC9C0] \u2013 (https://youtu.be/52H_Bgd7_RY?si=40x_YTqJ52Jua_G9)"
 --- !u!222 &1288141354
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -875,7 +869,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.8, y: 30}
+  m_AnchoredPosition: {x: 32.3, y: 45.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1724563890
@@ -905,15 +899,15 @@ RectTransform:
   m_GameObject: {fileID: 1724563890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
+  m_LocalScale: {x: 0.46, y: 0.46, z: 0.46}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1499044326}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -138.91922, y: -125.00273}
-  m_SizeDelta: {x: 854.9794, y: 301.8374}
+  m_AnchoredPosition: {x: -617, y: -126.52742}
+  m_SizeDelta: {x: 516.8921, y: 308.4665}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1724563892
 MonoBehaviour:
@@ -984,15 +978,15 @@ RectTransform:
   m_GameObject: {fileID: 1731889151}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
+  m_LocalScale: {x: 0.46, y: 0.46, z: 0.46}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1499044326}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 109.2, y: -126.2487}
-  m_SizeDelta: {x: 2879.9, y: 326.7563}
+  m_AnchoredPosition: {x: 300, y: -120.111244}
+  m_SizeDelta: {x: 1582.1656, y: 300.0718}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1731889153
 MonoBehaviour:
